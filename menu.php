@@ -20,7 +20,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="?pages=anggota" class="nav-link">
+              <a href="?pages=daftarAnggota" class="nav-link">
                 <i class="nav-icon fas fa-hospital-user"></i>
                 <p>
                   Daftar Anggota

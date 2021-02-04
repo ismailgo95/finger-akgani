@@ -10,7 +10,7 @@ if ($_GET) {
       include 'beranda.php';
       break;
     case 'daftarAnggota':
-      include 'view/daftarAnggota.php';
+      include 'view/daftar-anggota/v_daftarAnggota.php';
       break;
 
     default:
