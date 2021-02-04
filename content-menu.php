@@ -9,8 +9,8 @@ if ($_GET) {
     case 'beranda':
       include 'beranda.php';
       break;
-    case 'daftarAnggota':
-      include 'view/daftar-anggota/v_daftarAnggota.php';
+    case 'dataPersonal':
+      include 'view/data-personal/v_dataPersonal.php';
       break;
 
     default:

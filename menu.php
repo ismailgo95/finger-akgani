@@ -19,42 +19,30 @@
             </p>
           </a>
         </li>
+        <li class="nav-header">DATA PERSONAL</li>
         <li class="nav-item">
-          <a href="?pages=daftarAnggota" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'daftarAnggota' ? 'active' : '' : ''; ?>">
+          <a href="?pages=dataPersonal" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'dataPersonal' ? 'active' : '' : ''; ?>">
             <i class="nav-icon fas fa-hospital-user"></i>
             <p>
-              Daftar Anggota
+              Upload Personal ke Mesin
             </p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon far fa-envelope"></i>
+          <a href="?pages=dataPersonal" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'dataPersonal' ? 'active' : '' : ''; ?>">
+            <i class="nav-icon fas fa-hospital-user"></i>
             <p>
-              Mailbox
-              <i class="fas fa-angle-left right"></i>
+              Hapus Personal di Mesin
             </p>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="pages/mailbox/mailbox.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Inbox</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/mailbox/compose.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Compose</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/mailbox/read-mail.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Read</p>
-              </a>
-            </li>
-          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="?pages=dataPersonal" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'dataPersonal' ? 'active' : '' : ''; ?>">
+            <i class="nav-icon fas fa-hospital-user"></i>
+            <p>
+              Data Personal
+            </p>
+          </a>
         </li>
       </ul>
     </nav>

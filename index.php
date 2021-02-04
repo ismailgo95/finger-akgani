@@ -15,6 +15,8 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="assets/css/adminlte.min.css">
   <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+  <!-- DataTable -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/datatables.min.css" />
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -22,6 +24,7 @@
     <?php include 'navbar.php' ?>
     <?php include 'menu.php' ?>
     <?php include 'content-menu.php' ?>
+    <?php include 'beranda.php' ?>
 
     <!-- Main Footer -->
     <footer class="main-footer">
@@ -49,6 +52,13 @@
   <script src="assets/js/demo.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="assets/js/pages/dashboard3.js"></script>
+
+  <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.23/datatables.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#datatable').DataTable();
+    });
+  </script>
 </body>
 
 </html>
