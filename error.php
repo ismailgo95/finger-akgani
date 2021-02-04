@@ -26,7 +26,7 @@
 
         <p>
           Kami Menemukan Anda Sedang Mengakses Halaman yang anda cari.
-          Mohon Maaf Halaman Yang anda Cari tidak ditemukan <a href="index.php">Kembali ke Halaman</a> atau refresh ulang.
+          Mohon Maaf Halaman Yang anda Cari tidak ditemukan <a href="index.php">Kembali ke Halaman BERANDA</a> atau refresh ulang.
         </p>
 
         <form class="search-form">
