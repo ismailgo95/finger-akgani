@@ -21,7 +21,7 @@
   <div class="wrapper">
     <?php include 'navbar.php' ?>
     <?php include 'menu.php' ?>
-    <?php include 'content.php' ?>
+    <?php include 'content-menu.php' ?>
 
     <!-- Main Footer -->
     <footer class="main-footer">
