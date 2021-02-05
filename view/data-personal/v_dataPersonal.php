@@ -8,10 +8,18 @@
           <!-- general form elements -->
           <div class="card card-light mt-4">
             <div class="card-header">
-              <span class="card-title">
+              <span class="card-title mt-2">
                 <i class="fas fa-bars"></i>
               </span>
-              <h3 class="card-title ml-4 text-lg text-bold"> Daftar Anggota</h3>
+              <h3 class="card-title mt-2 ml-4 text-lg text-bold"> Daftar Anggota</h3>
+              <a href="#" class="float-right btn btn-primary btn-icon-split" data-toggle="modal" data-target="#modal_add" id="btn_tambah">
+                <span class="icon text-white">
+                  <i class="fas fa-plus-square"></i>
+                </span>
+                <span class="text-white">
+                  Tambah Data
+                </span>
+              </a>
             </div>
             <!-- /.card-header -->
             <!-- form start -->

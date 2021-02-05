@@ -24,23 +24,23 @@
           <a href="?pages=dataPersonal" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'dataPersonal' ? 'active' : '' : ''; ?>">
             <i class="nav-icon fas fa-hospital-user"></i>
             <p>
+              Data Personal
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="?pages=uploadMesin" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'uploadMesin' ? 'active' : '' : ''; ?>">
+            <i class="nav-icon fas fa-upload"></i>
+            <p>
               Upload Personal ke Mesin
             </p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="?pages=dataPersonal" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'dataPersonal' ? 'active' : '' : ''; ?>">
-            <i class="nav-icon fas fa-hospital-user"></i>
+          <a href="?pages=hapusMesin" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'hapusMesin' ? 'active' : '' : ''; ?>">
+            <i class="nav-icon fas fa-trash"></i>
             <p>
               Hapus Personal di Mesin
-            </p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="?pages=dataPersonal" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'dataPersonal' ? 'active' : '' : ''; ?>">
-            <i class="nav-icon fas fa-hospital-user"></i>
-            <p>
-              Data Personal
             </p>
           </a>
         </li>
