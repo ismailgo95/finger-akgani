@@ -16,9 +16,8 @@ if ($_GET) {
     case 'act-simpan':
       include 'view/data-personal/act_simpan.php';
       break;
-
-    case 'act-buku':
-      include 'modul/act-buku.php';
+    case 'act-hapus';
+      include 'view/data-personal/act-hapus.php';
       break;
 
     default:
