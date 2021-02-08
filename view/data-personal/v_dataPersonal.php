@@ -12,8 +12,7 @@
                 <i class="fas fa-bars"></i>
               </span>
               <h3 class="card-title mt-2 ml-4 text-lg text-bold"> Daftar Anggota</h3>
-              <a href="#" class="float-right btn btn-primary btn-icon-split" data-toggle="modal"
-                data-target="#modal-default" id="btn_tambah">
+              <a href="#" class="float-right btn btn-primary btn-icon-split" data-toggle="modal" data-target="#modal-default" id="btn_tambah">
                 <span class="icon text-white">
                   <i class="fas fa-plus-square"></i>
                 </span>
@@ -77,7 +76,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form>
+      <form method="POST" action="act-simpan.php">
         <div class="modal-body">
           <div class="form-group">
             <label for="nama">Nama</label>
@@ -98,7 +97,7 @@
         </div>
         <div class="modal-footer justify-content-between">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
         </div>
       </form>
     </div>
