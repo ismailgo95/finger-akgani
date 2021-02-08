@@ -13,6 +13,14 @@ if ($_GET) {
       include 'view/data-personal/v_dataPersonal.php';
       break;
 
+    case 'act-simpan':
+      include 'view/data-personal/act_simpan.php';
+      break;
+
+    case 'act-buku':
+      include 'modul/act-buku.php';
+      break;
+
     default:
       include 'error.php';
       break;

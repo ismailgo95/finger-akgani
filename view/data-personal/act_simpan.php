@@ -1,6 +1,4 @@
 <?php
-include "./config/koneksi.php";
-
 if (isset($_POST['btnSimpan'])) {
   $nama         = $_POST['nama'];
   $nip          = $_POST['nip'];

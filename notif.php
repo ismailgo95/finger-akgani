@@ -1,22 +1,34 @@
 <?php
 if ($_GET['notif'] == 'berhasil-add') { ?>
-  <div class="alert alert-success" role="alert">
-    <i class="fa fa-check"></i> Data BERHASIL ditambah
+  <div class="alert alert-success mt-3 alert-dismissible fade show" role="alert">
+    Data <strong>BERHASIL</strong> ditambah
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
 <?php
 } elseif ($_GET['notif'] == 'gagal-add') { ?>
-  <div class="alert alert-danger" role="alert">
-    <i class="fa fa-warning"></i> Data GAGAL ditambah
+  <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert">
+    Data <strong>GAGAL</strong> ditambah
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
 <?php
 } elseif ($_GET['notif'] == 'berhasil-edit') { ?>
-  <div class="alert alert-success" role="alert">
-    <i class="fa fa-check"></i> Data BERHASIL diubah
+  <div class="alert alert-success mt-3 alert-dismissible fade show" role="alert">
+    Data <strong>BERHASIL</strong> diubah
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
 <?php
 } elseif ($_GET['notif'] == 'gagal-edit') { ?>
-  <div class="alert alert-danger" role="alert">
-    <i class="fa fa-warning"></i> Data GAGAL diubah
+  <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert">
+    Data <strong>GAGAL</strong> diubah
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
 <?php
 } elseif ($_GET['notif'] == 'warning-size') { ?>

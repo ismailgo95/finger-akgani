@@ -2,17 +2,13 @@
   <!-- Main content -->
   <section class="content">
     <div class="container-fluid">
-      <div class="row mt-4">
+      <div class="row">
+        <!-- left column -->
         <div class="col-md-12">
           <?php
           if (isset($_GET['notif'])) {
             include 'notif.php';
           } ?>
-        </div>
-      </div>
-      <div class="row">
-        <!-- left column -->
-        <div class="col-md-12">
           <!-- general form elements -->
           <div class="card card-light mt-4">
             <div class="card-header">
@@ -44,17 +40,22 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Muhammad ismail</td>
-                    <td>Muhammad ismail</td>
-                    <td>Muhammad ismail</td>
-                    <td>Muhammad ismail</td>
-                    <td>
-                      <a class="btn btn-warning" href="#"><i class="fas fa-pencil-alt"></i></a>
-                      <a class="btn btn-danger" href="#"><i class="fas fa-trash"></i></a>
-                    </td>
-                  </tr>
+                  <?php
+                  $no = 1;
+                  $query = mysqli_query($koneksi, "SELECT * FROM anggota");
+                  while ($data = mysqli_fetch_array($query)) : ?>
+                    <tr>
+                      <td><?= $no++ ?></td>
+                      <td><?= $data['nama'] ?></td>
+                      <td><?= $data['nip'] ?></td>
+                      <td><?= $data['jabatan'] ?></td>
+                      <td><?= $data['keterangan'] ?></td>
+                      <td>
+                        <a class="btn btn-warning" href="#"><i class="fas fa-pencil-alt"></i></a>
+                        <a class="btn btn-danger" href="#"><i class="fas fa-trash"></i></a>
+                      </td>
+                    </tr>
+                  <?php endwhile; ?>
                 </tbody>
               </table>
             </div>
@@ -84,28 +85,28 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form method="POST" action="act-simpan.php">
+      <form method="POST" action="?pages=act-simpan">
         <div class="modal-body">
           <div class="form-group">
             <label for="nama">Nama</label>
-            <input type="text" class="form-control" id="nama" placeholder="Masukan Nama">
+            <input type="text" name="nama" class="form-control" id="nama" placeholder="Masukan Nama">
           </div>
           <div class="form-group">
             <label for="nip">NIP</label>
-            <input type="text" class="form-control" id="nip" placeholder="Masukan Nip">
+            <input type="text" name="nip" class="form-control" id="nip" placeholder="Masukan Nip">
           </div>
           <div class="form-group">
             <label for="jabatan">Jabatan</label>
-            <input type="text" class="form-control" id="jabatan" placeholder="Masukan Jabatan">
+            <input type="text" name="jabatan" class="form-control" id="jabatan" placeholder="Masukan Jabatan">
           </div>
           <div class="form-group">
             <label for="keterangan">Keterangan</label>
-            <input type="text" class="form-control" id="keterangan" placeholder="Masukan Keterangan">
+            <input type="text" name="keterangan" class="form-control" id="keterangan" placeholder="Masukan Keterangan">
           </div>
         </div>
         <div class="modal-footer justify-content-between">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="submit" name="btnSimpan" class="btn btn-primary">Save changes</button>
+          <button type="submit" name="btnSimpan" class="btn btn-primary">Submit</button>
         </div>
       </form>
     </div>
