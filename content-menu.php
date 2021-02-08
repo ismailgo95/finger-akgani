@@ -19,6 +19,14 @@ if ($_GET) {
     case 'act-hapus';
       include 'view/data-personal/act-hapus.php';
       break;
+    case 'act-update';
+      include 'view/data-personal/act-update.php';
+      break;
+
+      // Fingerprint
+    case 'finger';
+      include 'view/finger/v_fingerUpload.php';
+      break;
 
     default:
       include 'error.php';

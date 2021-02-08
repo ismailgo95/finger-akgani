@@ -29,7 +29,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="?pages=uploadMesin" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'uploadMesin' ? 'active' : '' : ''; ?>">
+          <a href="?pages=finger" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'finger' ? 'active' : '' : ''; ?>">
             <i class="nav-icon fas fa-upload"></i>
             <p>
               Upload Personal ke Mesin
