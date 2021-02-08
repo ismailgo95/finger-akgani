@@ -2,6 +2,14 @@
   <!-- Main content -->
   <section class="content">
     <div class="container-fluid">
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <?php
+          if (isset($_GET['notif'])) {
+            include 'notif.php';
+          } ?>
+        </div>
+      </div>
       <div class="row">
         <!-- left column -->
         <div class="col-md-12">
@@ -97,7 +105,7 @@
         </div>
         <div class="modal-footer justify-content-between">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Save changes</button>
+          <button type="submit" name="btnSimpan" class="btn btn-primary">Save changes</button>
         </div>
       </form>
     </div>

@@ -1,7 +1,7 @@
 <?php
 include "./config/koneksi.php";
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['btnSimpan'])) {
   $nama         = $_POST['nama'];
   $nip          = $_POST['nip'];
   $jabatan      = $_POST['jabatan'];
@@ -10,8 +10,8 @@ if (isset($_POST['submit'])) {
   $query = mysqli_query($koneksi, "INSERT INTO anggota(nama,nip,jabatan,keterangan) VALUES ('$nama','$nip','$jabatan','$keterangan')");
 
   if ($query) {
-    header("Location:?page=jenis&notif=berhasil-add");
+    header("Location:?pages=dataPersonal&notif=berhasil-add");
   } else {
-    header("Location:?page=jenis&notif=gagal-add");
+    header("Location:?pages=dataPersonal&notif=gagal-add");
   }
 }
