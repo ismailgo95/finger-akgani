@@ -32,22 +32,23 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <?php
-                  $no = 1;
-                  $query = mysqli_query($koneksi, "SELECT * FROM anggota");
-                  while ($data = mysqli_fetch_array($query)) : ?>
-                    <tr>
-                      <td><?= $no++ ?></td>
-                      <td><?= $data['nama'] ?></td>
-                      <td><?= $data['nip'] ?></td>
-                      <td><?= $data['jabatan'] ?></td>
-                      <td><?= $data['keterangan'] ?></td>
-                      <td>
-                        <a class="btn btn-warning" data-toggle="modal" data-target="#modal-update<?= $data['id'] ?>" href=""><i class="fas fa-pencil-alt"></i></a>
-                        <a class="btn btn-danger" href="?pages=act-hapus&id=<?= $data['id'] ?>"><i class="fas fa-trash"></i></a>
-                      </td>
-                    </tr>
-                  <?php endwhile; ?>
+                  <form action="?pages=act-upload" method="post">
+                    <?php
+                    $no = 1;
+                    $query = mysqli_query($koneksi, "SELECT * FROM anggota");
+                    while ($data = mysqli_fetch_array($query)) : ?>
+                      <tr>
+                        <td><?= $no++ ?></td>
+                        <td><?= $data['nama'] ?></td>
+                        <td><?= $data['nip'] ?></td>
+                        <td><?= $data['jabatan'] ?></td>
+                        <td><?= $data['keterangan'] ?></td>
+                        <td>
+                          <button type="submit" name="btnUpload" class="btn btn-primary"> <i class="fas fa-upload"></i> Upload</button>
+                        </td>
+                      </tr>
+                    <?php endwhile; ?>
+                  </form>
                 </tbody>
               </table>
             </div>
