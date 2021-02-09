@@ -27,7 +27,7 @@ if ($_GET) {
     case 'finger';
       include 'view/finger/v_fingerUpload.php';
       break;
-    case 'act-upload';
+    case 'act-upload-finger';
       include 'view/finger/act-upload.php';
       break;
 

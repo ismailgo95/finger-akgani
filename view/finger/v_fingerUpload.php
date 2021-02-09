@@ -32,7 +32,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <form action="?pages=act-upload" method="post">
+                  <form action="?pages=act-upload-finger" method="post">
                     <?php
                     $no = 1;
                     $query = mysqli_query($koneksi, "SELECT * FROM anggota");
@@ -44,7 +44,7 @@
                         <td><?= $data['jabatan'] ?></td>
                         <td><?= $data['keterangan'] ?></td>
                         <td>
-                          <button type="submit" name="btnUpload" class="btn btn-primary"> <i class="fas fa-upload"></i> Upload</button>
+                          <a href="?pages=act-upload-finger&id=<?= $data['id'] ?>"> <i class="fas fa-upload"></i> Upload</a>
                         </td>
                       </tr>
                     <?php endwhile; ?>
@@ -66,3 +66,46 @@
   </section>
   <!-- /.content -->
 </div>
+
+<!-- Update Modal -->
+<?php
+$query = mysqli_query($koneksi, "SELECT * FROM anggota");
+while ($data = mysqli_fetch_array($query)) { ?>
+  <div class="modal fade" id="modal-update<?= $data['id'] ?>">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Update Anggota <?= $data['id'] ?></h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form method="POST" action="?pages=act-update">
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Nama</label>
+              <input type="hidden" name="id" value="<?= $data['id'] ?>">
+              <input type="text" name="nama" class="form-control" placeholder="Masukan Nama" value="<?= $data['nama'] ?>">
+            </div>
+            <div class="form-group">
+              <label>NIP</label>
+              <input type="text" name="nip" class="form-control" placeholder="Masukan Nip" value="<?= $data['nip'] ?>">
+            </div>
+            <div class="form-group">
+              <label>Jabatan</label>
+              <input type="text" name="jabatan" class="form-control" placeholder="Masukan Jabatan" value="<?= $data['jabatan'] ?>">
+            </div>
+            <div class="form-group">
+              <label>Keterangan</label>
+              <input type="text" name="keterangan" class="form-control" placeholder="Masukan Keterangan" value="<?= $data['keterangan'] ?>">
+            </div>
+          </div>
+          <div class="modal-footer justify-content-between">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" name="btnUpdate" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+<?php } ?>
