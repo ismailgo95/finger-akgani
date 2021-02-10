@@ -1,10 +1,12 @@
 <?php
 
-if (isset($_POST['btnSubmit'])) {
+if (isset($_POST['btnUpload'])) {
+  $ip = $_POST['ip'];
+  $key = $_POST['key'];
   $Connect = fsockopen($ip, "80", $errno, $errstr, 1);
   if ($Connect) {
-    $id     = $_POST['id'];
-    $nama   = $_POST['nama'];
+    $id   = $_POST['id'];
+    $nama  = $_POST['nama'];
     $soap_request = "<SetUserInfo><ArgComKey Xsi:type=\"xsd:integer\">" . $key . "</ArgComKey><Arg><PIN>" . $id . "</PIN><Name>" . $nama . "</Name></Arg></SetUserInfo>";
     $newLine = "\r\n";
     fputs($Connect, "POST /iWsService HTTP/1.0" . $newLine);
@@ -16,10 +18,7 @@ if (isset($_POST['btnSubmit'])) {
       $buffer = $buffer . $Response;
     }
   } else {
-    echo "Koneksi Bermasalah";
+    header("Location:?pages=finger&notif=koneksi");
   }
-  require_once("parse.php");
-  $buffer = Parse_Data($buffer, "<Information>", "</Information>");
-  echo "<B>Result:</B><BR>";
-  echo $buffer;
+  header("Location:?pages=finger&notif=berhasil-upload");
 }

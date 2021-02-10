@@ -1,4 +1,7 @@
-<?php include "config/koneksi.php"; ?>
+<?php
+include "config/koneksi.php";
+require_once("parse.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
