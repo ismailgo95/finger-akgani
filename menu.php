@@ -37,7 +37,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="?pages=hapusMesin" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'hapusMesin' ? 'active' : '' : ''; ?>">
+          <a href="?pages=finger-hapus" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'finger-hapus' ? 'active' : '' : ''; ?>">
             <i class="nav-icon fas fa-trash"></i>
             <p>
               Hapus Personal di Mesin

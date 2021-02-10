@@ -42,8 +42,11 @@ if ($_GET['notif'] == 'berhasil-add') { ?>
   </div>
 <?php
 } elseif ($_GET['notif'] == 'berhasil-delete') { ?>
-  <div class="alert alert-success" role="alert">
-    <i class="fa fa-check"></i> Data BERHASIL dihapus
+  <div class="alert alert-success mt-3 alert-dismissible fade show" role="alert">
+    Data <strong>BERHASIL</strong> dihapus
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
 <?php
 } elseif ($_GET['notif'] == 'gagal-delete') { ?>

@@ -27,8 +27,14 @@ if ($_GET) {
     case 'finger';
       include 'view/finger/v_fingerUpload.php';
       break;
+    case 'finger-hapus';
+      include 'view/finger/v_fingerHapus.php';
+      break;
     case 'act-upload-finger';
       include 'view/finger/act-upload.php';
+      break;
+    case 'act-hapus-finger';
+      include 'view/finger/act-hapus.php';
       break;
 
     default:
