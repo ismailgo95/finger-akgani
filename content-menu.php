@@ -30,6 +30,11 @@ if ($_GET) {
     case 'finger-hapus';
       include 'view/finger/v_fingerHapus.php';
       break;
+    case 'tampil-finger';
+      include 'view/finger/v_fingerTampil.php';
+      break;
+
+      // Action mesin Finger
     case 'act-upload-finger';
       include 'view/finger/act-upload.php';
       break;

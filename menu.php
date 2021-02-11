@@ -44,6 +44,14 @@
             </p>
           </a>
         </li>
+        <li class="nav-item">
+          <a href="?pages=tampil-finger" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'tampil-finger' ? 'active' : '' : ''; ?>">
+            <i class="nav-icon fas fa-print"></i>
+            <p>
+              Cetak User Finger Print
+            </p>
+          </a>
+        </li>
       </ul>
     </nav>
     <!-- /.sidebar-menu -->
