@@ -14,20 +14,17 @@ if (isset($_POST['btnHapus'])) {
     while ($Response = fgets($Connect, 1024)) {
       $buffer = $buffer . $Response;
     }
+
+    $query =  mysqli_query($koneksi, "DELETE FROM anggota WHERE id='$id'");
+    if ($query) {
+      if ($query) {
+        header("Location:?pages=finger-hapus&notif=berhasil-delete");
+      } else {
+        header("Location:?pages=finger-hapus&notif=gagal-delete");
+      }
+    }
+    fclose($Connect);
   } else {
     echo "Konkesi Bermasalah";
   }
-  $query =  mysqli_query($koneksi, "DELETE FROM anggota WHERE id='$id'");
-  if ($query) {
-    if ($query) {
-      header("Location:?pages=finger-hapus&notif=berhasil-delete");
-    } else {
-      header("Location:?pages=finger-hapus&notif=gagal-delete");
-    }
-  }
-  // //echo $buffer;
-  // $buffer = Parse_Data($buffer, "<DeleteUserResponse>", "</DeleteUserResponse>");
-  // $buffer = Parse_Data($buffer, "<Information>", "</Information>");
-  // echo "<B>Result:</B><BR>" . $buffer;
-
 }

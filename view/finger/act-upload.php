@@ -15,8 +15,9 @@ if (isset($_POST['btnUpload'])) {
     while ($Response = fgets($Connect, 1024)) {
       $buffer = $buffer . $Response;
     }
+    header("Location:?pages=finger&notif=berhasil-upload");
+    fclose($Connect);
   } else {
     header("Location:?pages=finger&notif=koneksi");
   }
-  header("Location:?pages=finger&notif=berhasil-upload");
 }
