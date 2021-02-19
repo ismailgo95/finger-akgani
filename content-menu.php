@@ -42,6 +42,11 @@ if ($_GET) {
       include 'view/finger/act-hapus.php';
       break;
 
+      // log daftar hadir
+    case 'logAbsensi';
+      include 'view/absensi/v_absensi.php';
+      break;
+
     default:
       include 'error.php';
       break;

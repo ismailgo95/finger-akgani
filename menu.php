@@ -19,6 +19,17 @@
             </p>
           </a>
         </li>
+
+        <li class="nav-header">ABSENSI</li>
+        <li class="nav-item">
+          <a href="?pages=logAbsensi" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'logAbsensi' ? 'active' : '' : ''; ?>">
+            <i class="nav-icon fas fa-fingerprint"></i>
+            <p>
+              Data Hadir
+            </p>
+          </a>
+        </li>
+
         <li class="nav-header">DATA PERSONAL</li>
         <li class="nav-item">
           <a href="?pages=dataPersonal" class="nav-link <?= isset($_GET['pages']) ? $_GET['pages'] == 'dataPersonal' ? 'active' : '' : ''; ?>">
