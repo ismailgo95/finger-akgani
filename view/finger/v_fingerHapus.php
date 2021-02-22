@@ -69,14 +69,6 @@
 
 <!-- Update Modal -->
 <?php
-$ip   = isset($_GET['ip']);
-$key   = isset($_GET['key']);
-if ($ip == "") {
-  $ip = "192.168.150.132";
-}
-if ($key == "") {
-  $key = "0";
-}
 $query = mysqli_query($koneksi, "SELECT * FROM anggota");
 while ($data = mysqli_fetch_array($query)) { ?>
   <div class="modal fade" id="modal-hapus<?= $data['id'] ?>">
@@ -91,14 +83,10 @@ while ($data = mysqli_fetch_array($query)) { ?>
         <form method="POST" action="?pages=act-hapus-finger">
           <div class="modal-body">
             <div class="form-group">
-              <label>Masukan IP Mesin Fingerprint</label>
-              <input type="Text" class="form-control" name="ip" value="<?= $ip ?>" size=15>
-              <br>
-              <label>Masukan CommKeys</label>
-              <input type="Text" class="form-control" name="key" size="5" value="<?= $key ?>">
-              <br>
               <label>UserID</label>
               <input type="text" class="form-control" name="id" value="<?= $data['id'] ?>" disabled>
+              <label>Nama</label>
+              <input type="text" class="form-control" name="nama" value="<?= $data['nama'] ?>" disabled>
               <input type="hidden" class="form-control" name="id" value="<?= $data['id'] ?>">
               <input type="hidden" name="nama" value="<?= $data['nama'] ?>">
             </div>

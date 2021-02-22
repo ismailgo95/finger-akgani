@@ -69,14 +69,6 @@
 
 <!-- Update Modal -->
 <?php
-$ip   = isset($_GET['ip']);
-$key   = isset($_GET['key']);
-if ($ip == "") {
-  $ip = "192.168.150.132";
-}
-if ($key == "") {
-  $key = "0";
-}
 $query = mysqli_query($koneksi, "SELECT * FROM anggota");
 while ($data = mysqli_fetch_array($query)) { ?>
   <div class="modal fade" id="modal-update<?= $data['id'] ?>">
@@ -89,18 +81,8 @@ while ($data = mysqli_fetch_array($query)) { ?>
           </button>
         </div>
         <form method="POST" action="?pages=act-upload-finger">
-          <div class="modal-body">
-            <div class="form-group">
-              <h5 class="text-center">Upload Nama <strong><?= $data['nama'] ?></strong> ke Mesin ?</h5>
-              <label>Masukan IP Mesin Fingerprint</label>
-              <input type="Text" class="form-control" name="ip" value="<?= $ip ?>" size=15>
-              <br>
-              <label>Masukan CommKeys</label>
-              <input type="Text" class="form-control" name="key" size="5" value="<?= $key ?>">
-              <input type="hidden" name="id" value="<?= $data['id'] ?>">
-              <input type="hidden" name="nama" value="<?= $data['nama'] ?>">
-            </div>
-          </div>
+          <input type="hidden" name="id" value="<?= $data['id'] ?>">
+          <input type="hidden" name="nama" value="<?= $data['nama'] ?>">
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i></button>
             <button type="submit" name="btnUpload" class="btn btn-primary"><i class="fas fa-upload"></i></button>
