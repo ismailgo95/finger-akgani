@@ -13,7 +13,7 @@
           <div class="card card-light mt-4">
             <div class="card-header">
               <span class="card-title mt-2">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-hospital-user"></i>
               </span>
               <h3 class="card-title mt-2 ml-4 text-lg text-bold"> Daftar Anggota</h3>
               <a href="#" class="float-right btn btn-primary btn-icon-split" data-toggle="modal" data-target="#modal-default" id="btn_tambah">

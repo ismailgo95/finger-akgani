@@ -13,7 +13,7 @@
           <div class="card card-light mt-4">
             <div class="card-header">
               <span class="card-title mt-2">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-upload"></i>
               </span>
               <h3 class="card-title mt-2 ml-4 text-lg text-bold"> Upload Ke Mesin</h3>
             </div>
