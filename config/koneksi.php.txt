@@ -1,0 +1,20 @@
+* file dummy.
+* koneksi.php ignored by git
+* copy koneksi.php.txt -> koneksi.php
+
+// configure database
+define('HOST', 'localhost');
+define('USER', 'your_user_db'); -----> your_user_database
+define('PASS', 'your_password_db'); -----> your_password_database
+define('DB', 'db_finger_gani');
+
+// fingerprint
+define('IP_FP', '192.168.1.1');  -----> your_ip_fingerprint
+define('PORT_FP', '80');         -----> your_port_fingerprint
+define('COMKEY', '0');           -----> your_comm_key
+
+$koneksi = mysqli_connect(HOST, USER, PASS, DB);
+
+if (mysqli_connect_errno()) {
+  echo "Koneksi database gagal : " . mysqli_connect_error();
+}

@@ -1,29 +1,35 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-  <!-- Content Header (Page header) -->
-  <div class="content-header">
+  <!-- Main content -->
+  <section class="content">
     <div class="container-fluid">
-      <div class="row mb-2">
-        <div class="col-sm-6">
-          <h1 class="m-0">Halaman Dashboard</h1>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card card-light mt-4">
+            <div class="card-header">
+              <span class="card-title mt-2">
+                <i class="fas fa-tv"></i>
+              </span>
+              <h3 class="card-title mt-2 ml-4 text-lg text-bold"> Beranda</h3>
+            </div>
+          </div>
         </div><!-- /.col -->
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->
-  </div>
-  <!-- /.content-header -->
 
-  <!-- Main content -->
-  <div class="content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-6">
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+          </div>
         </div>
+        <!-- /.row -->
       </div>
-      <!-- /.row -->
+      <!-- /.container-fluid -->
     </div>
-    <!-- /.container-fluid -->
-  </div>
-  <!-- /.content -->
+    <!-- /.content -->
+  </section>
 </div>
 <!-- /.content-wrapper -->
 
