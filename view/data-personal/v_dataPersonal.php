@@ -50,9 +50,10 @@
                       <td><?= $data['nip'] ?></td>
                       <td><?= $data['jabatan'] ?></td>
                       <td><?= $data['keterangan'] ?></td>
-                      <td>
+                      <td class="text-center">
                         <a class="btn btn-warning" data-toggle="modal" data-target="#modal-update<?= $data['id'] ?>" href=""><i class="fas fa-pencil-alt"></i></a>
                         <a class="btn btn-danger" href="?pages=act-hapus&id=<?= $data['id'] ?>"><i class="fas fa-trash"></i></a>
+                        <a class="btn btn-primary" href="?pages=act-hapus&id=<?= $data['id'] ?>"><i class="fas fa-upload" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i></a>
                       </td>
                     </tr>
                   <?php endwhile; ?>

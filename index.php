@@ -53,7 +53,13 @@ require_once("parse.php");
   <script>
     $(document).ready(function() {
       $('#datatable').DataTable();
+      $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+      });
     });
+  </script>
+  <script>
+
   </script>
 </body>
 
